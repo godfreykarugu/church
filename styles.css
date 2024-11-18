@@ -1,0 +1,556 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background: #c89666;; */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and links */
+    padding: 10px 20px;
+    background-color: #7b7a7a;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar */
+
+       /* Logo styling */
+        header div img {
+            max-width: 80px; /* Set a max width for the logo */
+            height: auto;     /* Maintain aspect ratio */
+            border-radius: 50%;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            gap: 20px; /* Space between each link */
+        }
+
+        /* Navbar links */
+        /* .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        } */
+
+        .navbar a:hover {
+            color: #ddd; /* Change color on hover */
+        }
+
+
+
+
+
+header a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Allows ::after to position relative to link */
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* Adjust distance below the link */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: #f4b404; /* Color of the underline */
+    transition: width 0.3s ease; /* Animation for stretching */
+}
+
+header a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+
+
+/* Scrolling Images */
+.scrolling-images {
+    margin-top: 4rem; /* To offset fixed navbar */
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+.image-slider {
+    display: flex;
+    gap: 1rem;
+}
+
+.slide {
+    min-width: 200px;
+    background-color: #ddd;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Vision and Mission Section */
+.vision-mission {
+    display: flex;
+    padding: 2rem;
+}
+
+.two-columns {
+    display: flex;
+    gap: 2rem;
+}
+
+.column {
+    flex: 1;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.styled-column {
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px;       /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    padding: 15px;
+}
+
+/* Hover effect */
+.styled-column:hover {
+    transform: translateY(-5px); /* Lift up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Optional: Accordion styling */
+.accordion-item {
+    border: 2px #f7e708 solid;
+    margin-bottom: 5px;
+    border-bottom-left-radius: 10px;
+    background-color: #e0dcc1;
+}
+.accordion-item h3 {
+    cursor: pointer;
+    background-color: #f4b404;
+    padding: 0.5rem;
+   
+    border-top-left-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+}
+
+.accordion-item p {
+    padding: 0.5rem;
+}
+
+.event-news{
+    background: #f7e708;
+    border-radius: 20px;
+}
+
+
+    /* Full-width card styling */
+    .card-row {
+        margin-bottom: 20px;
+        margin-top: 20px;
+       background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 100px; /* Rounded corners for the card */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        padding-bottom: 25px;
+        padding-top: 25px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        height: auto;
+    }
+
+    /* Hover effect on card */
+    .card-row:hover {
+        transform: translateY(-5px); /* Lift on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        cursor: pointer;
+    }
+
+    /* Image styling */
+    .card-row img {
+        width: 100px; /* Fixed size for circular image */
+        height: 100px;
+        border-radius: 50%; /* Makes the image circular */
+        float: right; /* Align image to the right */
+        margin-left: 15px;
+    }
+
+    /* Text styling */
+    .card-text {
+        display: column;
+        justify-content: center; /* Horizontally center the text */
+        align-items: center;     /* Vertically center the text */
+        height: 100px; 
+        margin-left: 250px;
+        flex-grow: 1; /* Makes text area stretch to fill the space */
+        
+    }
+
+
+ 
+/* Two Cards Section */
+
+
+/* Branches Section */
+.branches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.branch-card {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: justify;
+    /* border-radius: 10px; */
+    border-top-right-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.branch-card:hover {
+    /* background-color: #beb6b6; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transform: translateY(-20px); /* Slide the card up by 10px */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.branch-card i{
+    color:#3204d4;
+    font-size: 84px;
+    padding-right: 25px;
+    padding-left: 25px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #00f;
+    border-radius: 50%;
+
+    margin: 0 auto;
+    transition: color 0.8s ease, background-color 0.8s ease;
+} 
+
+.row .col-12:nth-child(odd) .branch-card i {
+    color:#3204d4;
+    
+    border: 1px solid #00f;
+}
+
+.row .col-12:nth-child(odd) .branch-card:hover i {
+    background-color: #3204d4;
+    color:#fff;
+}
+
+/* Alternate color for even cards */
+.row .col-12:nth-child(even) .branch-card i {
+    color: #f4b404; /* Change to green for even items */
+   
+    border: 1px solid #f4b404;
+}
+
+.row .col-12:nth-child(even) .branch-card:hover i {
+    background-color: #f4b404;
+    color:#fff;
+}
+.branch-card:hover i{
+    background-color: #f4b404;
+    color:#fff;
+} 
+
+.row-assemblies{
+    background: linear-gradient(45deg, #f4b404,  #bdb6c5);
+    border-radius: 25px;
+
+}
+/* contact */
+
+.form-container{
+    margin-top: 170px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px;
+}
+
+/* .contact .info i {
+    margin: auto;
+    font-size: 40px;
+    color: #149ddd;
+    padding-right: 40px;
+    border: 1px solid #f4b404;
+    border-radius: 50%;
+    float: left;
+    width: 88px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    
+} */
+.contact .info {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* Space between icon and content */
+    margin-bottom: 20px; /* Adds spacing between info items */
+}
+
+.contact .info h4{
+    font-size: 34px;
+}
+
+.contact .info p{
+    font-size: 20px;
+}
+
+.contact .info i {
+    font-size: 40px;
+    color: #149ddd;
+    width: 88px;
+    height: 88px;
+    border: 1px solid #f4b404;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.contact .info .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.row.g-3.d-flex {
+    display: flex; /* Make the parent container a flexbox */
+    align-items: stretch; /* Stretch child elements to fill available height */
+  }
+ 
+/* Footer */
+.contact-col{
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px;  
+}
+
+.links ol li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.links ol li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: left;
+}
+.footer {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background-color: linear-gradient(45deg, #fff,  #bdb6c5); 
+    /* color: white; */
+    /* background-color: linear-gradient(45deg, #f4b404,  #bdb6c5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; 
+   
+    background: linear-gradient(45deg, #f4b404,  #bdb6c5);;
+}
+
+.footer .info{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.footer-icons i {
+    font-size: 45px !important; /* Increased from 40px */
+    width: 44px;    /* Increased from 80px */
+    height: 44px;   /* Increased from 80px */
+    border: 1px solid #f4b404;
+    border-radius: 50%;
+    /* background-color: #f9f9f9; */
+    padding: 5px;
+}
+
+.footer-icons i:hover{
+    background-color: #f4b404;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer h5{
+    color:#fff;
+    margin-left: 25px;
+}
+
+/* --------------- About Page --------------------------------- */
+
+/* CSS for overlay text */
+.position-relative .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background for better contrast */
+    padding: 10px 20px;
+    border-radius: 5px; /* Optional rounded corners */
+  }
+
+  .leaders img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 40px;
+  }
+  .leaders-content{
+    margin-top: 25px;
+  }
+
+  .history{
+    background: #e0dcc1;
+  }
+  
+  /* ---------------------- Team-------------- */
+
+  .page-image img{
+    height: 350px;
+    width: 100%;
+    border-radius: 25px;
+
+  }
+
+
+  .pastoral .card{
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px 0px rgba(227,213,213,0.75);
+
+  }
+  .pastoral img{
+    border-radius: 25px;
+  }
+
+  .pastoral p{
+    font-size: 18px;
+ 
+  }
+
+  .section-spacing{
+    margin-top: 50px;
+  }
+
+  .ministry{
+    background: linear-gradient(to bottom, #0707db,  #bdb6c5);
+  }
+
+  .call-to-action .card{
+    box-shadow: 10px 10px 5px 0px rgba(227,213,213,0.75);
+  }
+  .call-to-action .icon{
+    font-size: 52px;
+    color:#f4b404
+  }
+  .call-to-action h3{
+    font-size: 52px;
+    text-align: center;
+    text-shadow: #c0ed0a;
+  }
+  .call-to-action p{
+    text-align: justify;
+    line-height: 1.5;
+  }
+  
+  /* -------sermons--------- */
+  
+  #sermons{
+    background: url('church1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #sermons::after{
+    content: "";
+    position: absolute;
+
+   
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* ---------Giving----------- */
+  .give p{
+    font-size: 32px;
+    font-weight: 400;
+  }
+  .give img{
+    border-radius: 25px;
+  }
+
+  .give i{
+    color:#f4b404;
+  }
+  .method .card{
+    height: 300px;
+    border: 1 solid #f7e708;
+    text-align: center;
+    padding: 8px;
+    box-shadow: 10px 10px 5px 0px rgba(227,213,213,0.75);
+  }
+  .method i{
+    font-size: 32px;
+    color: #f7e708;
+  }
+  .method hr{
+    width: 40%;
+    margin: auto;
+    height: 10px;
+    color: #7b7a7a;
+  }
+  .method p{
+    text-align: justify;
+  }
+  .method h4{
+    color: #3c06a7;
+  }
+
+  #method{
+    background: url('church1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding-bottom: 25px;
+  }
+
+  .method h1{
+    color: #fff;
+    background-color: black;
+  }
+ 

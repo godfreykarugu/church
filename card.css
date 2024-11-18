@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.proj-card .image{
+    height: 100px;
+    width: 100px;
+}
+
+.image img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+.proj-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: #fff;
+    align-items: center;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 370px;
+    width: 100%;
+    position: relative;
+   
+}
+
+.proj-card::before{
+    content: '';
+    background-color: #4070f4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36%;
+    border-radius: 24px 24px 0 0;
+    position: absolute;
+}
+
+.image {
+    position: relative;
+    
+  }
+
+.proj-card .proj-text{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proj-card .proj-icons{
+    display: flex;
+
+}
+.proj-icons .icon a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    width: 34px;
+    height: 34px;
+    background-color: #4070f4;
+    border-radius: 50%;
+    color:#fff;
+    transition: all .3s;
+    cursor: pointer;
+    
+}
+.buttons{
+    display: flex;
+    margin-top: 15px;;
+}
+.buttons .button{
+    
+    margin: 0 5px;
+    padding: 5px;
+    border: none;
+    color:#fff;
+    background-color: #4070f4;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.analytics{
+    display: flex;
+    margin: 15px 10px;
+   align-items: center;
+}
+.data {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-right: 1px solid #8990a3;
+}
+.data:last-child{
+    border-right: 0;
+}
+.data i{
+    font-size: 18px;
+    margin-right: 6px;
+}
