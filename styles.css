@@ -74,8 +74,8 @@ header a:hover::after {
 
 /* Highlight the active page */
 header a.active {
-    color: #f4b404; /* Highlight color */
-    font-weight: bold; /* Optional: Make the text bold */
+    color: #f4b404; 
+    font-weight: bold; 
 }
 
 header a.active::after {
